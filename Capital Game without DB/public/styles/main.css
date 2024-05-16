@@ -1,0 +1,94 @@
+body {
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  /* background-size: auto; */
+  /* background-size: contain; */
+  /* background-size: 100vw 100vh; */
+
+
+  background-repeat: no-repeat;
+
+  /* background-position: center; */
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 50%;
+  margin: 10% auto 10% auto;
+  border-radius: 10px;
+  text-align: center;
+  height: 50vh;
+}
+
+
+
+h1 {
+  margin-bottom: 80px;
+  font-size: 2.5rem;
+}
+
+h3 {
+  margin: 0;
+}
+
+input {
+  width: 30%;
+  font-size: 1.1rem;
+  margin: 40px auto 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: large;
+  width: 100%;
+  padding: 10px;
+  background-color: #ffca00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.horizontal-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+button:hover {
+  background-color: #ffd500;
+}
+
+
+.checkmark {
+  color: transparent;
+  animation: checkmark 1s ease;
+}
+
+
+@keyframes checkmark {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: green;
+  }
+}
+
+.restart-button {
+  display: inline-block;
+  background-color: #fff;
+  color: #333;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

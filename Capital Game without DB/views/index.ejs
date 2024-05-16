@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Capital Game</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body id="app">
+    <form action="/submit" method="post" class="container">
+        <div class="horizontal-container">
+            <h3>  Total Score: <%= locals.totalScore ? totalScore : 0 %>  </h3>
+        </div>
+        <h1> <%= question.country %> </h1>
+        <input type="text" name="answer" placeholder="Enter the capital">
+        <button type="submit">
+            Submit
+            <% if(locals.wasCorrect) { %>
+                <span class="checkmark">✔</span>
+            <% } %>
+        </button>
+    </form>
+
+    <script>
+        var wasCorrect = "<%= locals.wasCorrect %>";
+        if (wasCorrect === "false") {
+          alert('Game over! Final best score: <%= locals.totalScore %>');
+          document.getElementById("app").innerHTML = '<a href="/" class="restart-button">Restart</a>'
+        }
+    
+    
+      </script>
+
+</body>
+</html>
